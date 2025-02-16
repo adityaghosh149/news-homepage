@@ -1,0 +1,391 @@
+@import url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
+
+:root {
+	/* Primary Colors */
+	--soft-orange: hsl(35, 77%, 62%);
+	--soft-red: hsl(5, 85%, 63%);
+
+	/* Neutral Colors */
+	--off-white: hsl(36, 100%, 99%);
+	--grayish-blue: hsl(233, 8%, 79%);
+	--dark-grayish-blue: hsl(236, 13%, 42%);
+	--very-dark-blue: hsl(240, 100%, 5%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+body {
+	width: 75%;
+	margin: auto;
+}
+
+/* nav */
+
+nav {
+	margin-top: 5rem;
+	margin-bottom: 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+nav .menu {
+	display: flex;
+	transition: all 0.5s ease;
+}
+
+nav .menu a {
+	text-decoration: none;
+	color: var(--grayish-blue);
+	margin-left: 4rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+nav .menu a:hover {
+	color: var(--soft-orange);
+	transform: translateY(-2px);
+}
+
+nav #menu-btn {
+	display: none;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	z-index: 2;
+}
+
+nav #menu-btn-close {
+	display: none;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	z-index: 2;
+}
+
+/* hero section */
+.hero-section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	gap: 2rem;
+}
+
+.hero-image {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.hero-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hero-new {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	padding: 2rem;
+	background-color: var(--very-dark-blue);
+	color: var(--off-white);
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.hero-new h2 {
+	font-size: 2rem;
+	color: var(--soft-orange);
+	margin-bottom: 3rem;
+}
+
+.hero-new .articles {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.hero-new .articles a {
+	display: block;
+	text-decoration: none;
+	color: var(--off-white);
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+	transition: all 0.3s ease;
+	font-weight: 700;
+}
+
+.hero-new .articles a:hover {
+	color: var(--soft-orange);
+}
+
+.hero-new .articles hr {
+	background-color: var(--grayish-blue);
+	height: 1px;
+	opacity: 0.4;
+}
+
+.hero-new .articles p {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	transition: all 0.3s ease;
+	color: var(--grayish-blue);
+	font-weight: 400;
+}
+
+.hero-heading {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	font-size: 2.5rem;
+	font-weight: 900;
+}
+
+.hero-description {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hero-description p {
+	width: 95%;
+	font-size: 1rem;
+	line-height: 2;
+	color: var(--dark-grayish-blue);
+}
+
+.hero-description button {
+	text-transform: uppercase;
+	border: none;
+	background-color: var(--soft-red);
+	padding: 1rem 1.5rem;
+	font-weight: 800;
+	letter-spacing: 0.5ch;
+	width: fit-content;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-description button:hover {
+	box-shadow: 3px 6px 12px rgba(0, 0, 0, 0.15);
+	transform: translateY(-2px);
+}
+
+/* bottom card section */
+
+.bottom-cards {
+	margin-top: 3rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-content: space-between;
+	gap: 2rem;
+	margin-bottom: 5rem;
+}
+
+.bottom-cards .bottom-card {
+	gap: 2rem;
+	flex: 1;
+}
+
+.bottom-cards .card-image {
+	height: fit-content;
+}
+
+.bottom-cards .card-image img {
+	max-height: 130px;
+	object-fit: cover;
+}
+
+.bottom-cards > div {
+	display: flex;
+}
+
+.bottom-cards .card-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.bottom-cards .card-number {
+	color: var(--soft-red);
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.bottom-cards .card-title {
+	font-size: 1.2rem;
+	font-weight: 800;
+}
+
+.bottom-cards .card-description {
+	font-size: 1rem;
+	color: var(--dark-grayish-blue);
+	width: 90%;
+}
+
+/* bottom */
+.attribution {
+	text-align: center;
+	text-wrap-mode: auto;
+	margin-bottom: 1rem;
+}
+
+/* media query */
+
+@media (max-width: 1100px) {
+	nav {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		align-items: center;
+	}
+
+	nav #menu-btn {
+		display: block;
+	}
+
+	nav .menu {
+		display: none;
+		background-color: var(--off-white);
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		flex-direction: column;
+		margin-left: 1.5rem;
+		left: 50%;
+		justify-content: center;
+	}
+
+	nav .menu a {
+		margin-bottom: 1rem;
+	}
+
+	.hero-image img {
+		content: url("./assets/images/image-web-3-mobile.jpg");
+	}
+
+	.hero-description p {
+		margin-bottom: 1rem;
+	}
+
+	.hero-heading {
+		font-size: 1.8rem;
+	}
+
+	.hero-section {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hero-new hr {
+		margin: 1.5rem 0;
+	}
+
+	.bottom-cards {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* tablet */
+@media (max-width: 768px) {
+	body {
+		width: 80%;
+	}
+
+	nav .menu {
+		left: 40%;
+	}
+
+	.hero-new .articles a {
+		font-family: 1.5;
+	}
+
+	.hero-new .articles p {
+		font-family: 1.2;
+	}
+
+	.hero-new hr {
+		margin: 2rem 0;
+	}
+}
+
+/* mobile */
+@media (max-width: 375px) {
+	body {
+		padding: 1rem;
+		max-width: 100vw;
+	}
+
+	nav {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	nav .logo {
+		height: 75%;
+		width: 75%;
+	}
+
+	nav .menu {
+		left: 30%;
+	}
+
+	nav .menu a {
+		margin-bottom: 1rem;
+	}
+
+	.hero-section {
+		gap: 1rem;
+	}
+
+	.hero-heading {
+		font-size: 1.5rem;
+		font-weight: 800;
+	}
+
+	.hero-description {
+		margin-bottom: 2.5rem;
+	}
+
+	.hero-description p {
+		width: 100%;
+		font-size: 1rem;
+		line-height: 1.2rem;
+		margin-bottom: 2rem;
+	}
+
+	.hero-new {
+		padding: 1rem;
+	}
+
+	.hero-new h2 {
+		margin-bottom: 2rem;
+	}
+
+	.hero-new .articles a {
+		font-size: 1.2rem;
+	}
+
+	.hero-new .articles p {
+		font-size: 0.9rem;
+	}
+
+	.hero-new .articles hr {
+		margin: 1.7rem 0;
+	}
+}
