@@ -1,4 +1,4 @@
-@import url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+@import url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
 
 :root {
@@ -275,7 +275,7 @@ nav #menu-btn-close {
 	}
 
 	.hero-image img {
-		content: url("./assets/images/image-web-3-mobile.jpg");
+		content: url("/assets/images/image-web-3-mobile.jpg");
 	}
 
 	.hero-description p {
